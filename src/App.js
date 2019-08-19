@@ -1,7 +1,7 @@
-import React, { Component } from 'react';
+import React, { Component, Fragment } from 'react';
 import logo from './logo.svg';
 import './App.css';
-import Toggle from './Toggle';
+import Toggle from './ToggleRPC';
 
 class App extends Component {
   render() {
@@ -12,7 +12,12 @@ class App extends Component {
           <h1 className="App-title">Welcome to React</h1>
         </header>
         <Toggle>
-          <h1>Hello</h1>
+          {({ on, toggle }) => (
+            <Fragment>
+              {on && <h1>Show Me</h1>}
+              <button onClick={toggle}>Show / Hide</button>
+            </Fragment>
+          )}
         </Toggle>
       </div>
     );
