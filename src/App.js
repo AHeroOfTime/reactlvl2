@@ -7,6 +7,7 @@ import { Toggle } from 'Utilities';
 import { Modal, Card } from 'Elements';
 import User from './User';
 import UserProvider from './UserProvider';
+import Drag from './Drag';
 
 class App extends Component {
   render() {
@@ -17,6 +18,7 @@ class App extends Component {
             <img src={logo} className="App-logo" alt="logo" />
             <h1 className="App-title">Welcome to React</h1>
           </header>
+          <Drag />
           <User />
           <section>
             <Toggle>
